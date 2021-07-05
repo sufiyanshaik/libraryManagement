@@ -1,0 +1,17 @@
+{% extends 'testapp/base.html' %}
+
+{% block child_block %}
+<h1>books information</h1>
+{% for book in book_list %}
+
+<ul>
+  <a href="/{{book.id}}/"><h1>{{book.Name}}</h1></a>
+  
+
+</ul>
+
+{% endfor %}
+<br><br>
+<button type="button" class="btn btn-large btn-success" name="button"> <a href="/create">Add New Book</a> </button>
+
+{% endblock %}

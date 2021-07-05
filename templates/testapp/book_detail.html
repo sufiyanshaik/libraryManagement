@@ -1,0 +1,17 @@
+{% extends 'testapp/base.html' %}
+
+{% block child_block %}
+<h1>books details information</h1>
+
+<ul>
+
+  <li>Book Name: {{book.Name}}</li>
+  <li>Author: {{book.Author}}</li>
+  <li>Pages: {{book.Pages}}</li>
+  <li>Price: {{book.Cost}}</li>
+</ul>
+<br><br>
+<button type="button" name="button"><a href="/update/{{book.id}}">edit</a></button>
+<button type="button" name="button"><a href="/delete/{{book.id}}">Remove</a></button>
+
+{% endblock %}
